@@ -5,6 +5,7 @@ def header_input():
     globalvariable=20
     nama=input("Nama karyawan :")
     gaji=float(input("Gaji karyawan :"))
+    print(nama in data)
     data.append({"nama":nama,"gaji":gaji})
 
 while True:
