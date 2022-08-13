@@ -5,11 +5,13 @@ def header_input():
     globalvariable=20
     nama=input("Nama karyawan :")
     gaji=float(input("Gaji karyawan :"))
-    print(nama in data)
+    for i in data:
+        if i["nama"]==nama.lower(): return "Data sudah ada"
     data.append({"nama":nama,"gaji":gaji})
+    return "Data ditambah!"
 
 while True:
-    header_input()    
+    print(header_input()) 
     if input("Selesai?(y/n)")=="y":
         break
 print(globalvariable)
