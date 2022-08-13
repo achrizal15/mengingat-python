@@ -15,9 +15,13 @@ class Human:
     def setName(self):
         self.name="Koko"
 
+    def setAgeSibling(self,saudara):
+        saudara.age=5
+
+    def setAge(self,newAge):
+        self.age=newAge
 
 mahasiswa=Human(name="Ach Rizal",age=10,profession="Mahasiswa")
-print(mahasiswa.getName())
-mahasiswa.setName()
-print(mahasiswa.getName())
+pengacara=Human(name="Widya Agustina",age=10,profession="Pengacara")
+print(pengacara.getNumberOfPeople())
 
