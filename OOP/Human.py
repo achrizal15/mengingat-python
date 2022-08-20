@@ -1,12 +1,17 @@
 class Human:
     numberOfPeople=0
-    def __init__(self,name,age,profession):
+    def __init__(self,name,age,nik,profession):
         self.name=name
         self.age=age
+        self.__nik=nik
         self.profession=profession
         Human.numberOfPeople+=1
+   
+    def getNik(self):
+        return self.__nik
         
-    def getNumberOfPeople(self):
+    @staticmethod   #@staticmethod # @classmethod 
+    def getNumberOfPeople():
         return Human.numberOfPeople
     
     def getName(self):
@@ -21,7 +26,4 @@ class Human:
     def setAge(self,newAge):
         self.age=newAge
 
-mahasiswa=Human(name="Ach Rizal",age=10,profession="Mahasiswa")
-pengacara=Human(name="Widya Agustina",age=10,profession="Pengacara")
-print(pengacara.getNumberOfPeople())
 
