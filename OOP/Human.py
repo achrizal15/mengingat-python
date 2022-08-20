@@ -6,13 +6,25 @@ class Human:
         self.__nik=nik
         self.profession=profession
         Human.numberOfPeople+=1
-   
-    def getNik(self):
-        return self.__nik
+    @property
+    def info(self):
+        return f"Nama saya {self.name}"
         
-    @staticmethod   #@staticmethod # @classmethod 
-    def getNumberOfPeople():
-        return Human.numberOfPeople
+    @property
+    def nik():
+        pass
+
+    @nik.getter
+    def nik(self):
+        return self.__nik
+
+    @nik.setter
+    def nik(self,newNik):
+        self.__nik=newNik
+        
+    @classmethod   #@staticmethod # @classmethod 
+    def getNumberOfPeople(sel):
+        return sel.numberOfPeople
     
     def getName(self):
         return f"Nama saya {self.name}"
